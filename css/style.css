@@ -1,0 +1,217 @@
+@font-face {
+    font-family: Pacifico-Regular sans-serif;
+    src: url(/fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: LXGWWenKaiMonoTC sans-serif;
+    src: url(/fonts/LXGWWenKaiMonoTC-Regular.ttf);
+}
+
+h1,
+label {
+    font-family: Pacifico-Regular sans-serif;
+    font-style: italic;
+    color: red;
+}
+
+p,
+a,
+button {
+    font-size: 16px;
+
+    color: red;
+}
+
+a:hover,
+button:hover {
+    color: rgb(199, 83, 0);
+    transition: 0.5;
+}
+
+a:active,
+button:active {
+    color: coral;
+}
+
+a:focus,
+button:focus {
+    color: coral;
+}
+
+body {
+    font-family: LXGWWenKaiMonoTC sans-serif;
+    font-size: 16px;
+
+    margin: 50px;
+
+    background-image: url(/img/black-white-photo-buildings-crane_250224-193.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*navigation-statr*/
+.logo {
+    display: flex;
+    justify-content: center;
+
+    font-size: 50px;
+}
+
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-menu-items {
+    margin-right: 25px;
+    font-size: 30px;
+    font-weight: 200;
+    padding: 10px 30px 10px 30px;
+}
+
+/*navigation-end*/
+
+/*footer start*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 70px;
+    background-color: rgb(61, 61, 61);
+    color: white;
+
+    border: 2px solid white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.footer-mail {
+    margin: 5px;
+}
+
+.footer-last-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+    margin-bottom: 0px;
+    position: relative;
+    bottom: 0;
+}
+
+/*footer end*/
+
+/*modal start*/
+
+.modal {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.open .modal-box {
+    transform: scale(1);
+}
+
+.modal-box {
+    position: relative;
+
+    max-width: 500px;
+    padding: 45px;
+    z-index: 1;
+    border: 1px solid rgb(255, 255, 255);
+
+    background-image: url(/img/background-modal.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 1);
+
+    transform: scale(0);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.modal-close-btn svg path {
+    transition: fill 0.4s;
+}
+
+.modal-close-btn:hover svg path {
+    opacity: 0.7;
+}
+
+.modal-close-btn:active {
+    opacity: 0.7;
+}
+
+.modal-question {
+    font-family: LXGWWenKaiMonoTC sans-serif;
+    font-size: 30px;
+    color: rgb(255, 0, 0);
+}
+
+.modal-button {
+    width: 90px;
+    height: 25px;
+    padding: 5px 5px;
+
+    position: absolute;
+
+    font-family: LXGWWenKaiMonoTC sans-serif;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.modal-input {
+    position: relative;
+
+    width: 160px;
+    height: 25px;
+
+    color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/*modal end*/
